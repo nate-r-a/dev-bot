@@ -2,7 +2,8 @@
 
 1. Create a Rails app to host your bot
   `rails new dev-bot -T --database=postgresql`
-   - `rails db:migrate` and `rails db:setup`
+   - (If you host your bot in Heorku later, it requires that you use Postgres)
+   - `rails db:setup` and `rails db:migrate`
    - Add `gem 'figaro'` and `gem 'slack-ruby-client'`to your Gemfile, then `bundle install`,
      - then `bundle exec figaro install`
 
@@ -27,7 +28,7 @@
    - Create a slash command that will send a POST to the endpoint you created
    - ![](https://i.imgur.com/gGzY231.png)
 
-7. Invite your bot to a channel (like #dev-bot-battleground) and test your command. See if ngrok is giving you a `200 OK` and check your server logs for activity
+7. /invite your bot user to a channel (like #dev-bot-battleground) and test your command. See if ngrok is giving you a `200 OK` and check your server logs for activity
 
 8. The params for a successful request will look something like this:
 
